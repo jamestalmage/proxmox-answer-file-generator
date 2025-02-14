@@ -1,0 +1,38 @@
+{
+	"name": "proxmox-answer-file-generator",
+	"version": "0.0.1",
+	"description": "Generate an answer file for automated Proxmox Installation",
+	"main": "distribution/index.js",
+	"author": {
+		"name": "James Talmage",
+		"email": "james@talmage.io",
+		"url": "https://james.talmage.io"
+	},
+	"exports": {
+		"types": "./distribution/index.d.ts",
+		"default": "./distribution/index.js"
+	},
+	"sideEffects": false,
+	"type": "module",
+	"license": "MIT",
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"ava": {
+		"extensions": {
+			"ts": "module"
+		},
+		"nodeArguments": [
+			"--import=tsimp"
+		]
+	},
+	"devDependencies": {
+		"@sindresorhus/tsconfig": "^7.0.0",
+		"ava": "^6.2.0",
+		"execa": "^9.5.2",
+		"temp-write": "^6.0.0",
+		"tsimp": "^2.0.12",
+		"typescript": "^5.7.3",
+		"xo": "^0.60.0"
+	}
+}

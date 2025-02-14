@@ -1,0 +1,11 @@
+.idea
+.vscode
+node_modules
+yarn.lock
+iso
+sample-config.ts
+sample-config.toml
+sample-devices.json
+.tsimp
+distribution
+post-install-script.sh
