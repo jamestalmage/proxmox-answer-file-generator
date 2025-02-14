@@ -18,6 +18,10 @@
 	"scripts": {
 		"test": "xo && ava"
 	},
+	"files": [
+		"distribution/**/*",
+		"README.md"
+	],
 	"ava": {
 		"extensions": {
 			"ts": "module"

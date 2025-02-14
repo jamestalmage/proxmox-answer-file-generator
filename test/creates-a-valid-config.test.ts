@@ -1,8 +1,8 @@
 import test from 'ava';
 import {execa} from 'execa';
 import tempWrite from 'temp-write';
-import {generateToml} from '../config/generate-toml.js';
-import {type ProxmoxConfig} from '../config/index.js';
+import {generateToml} from '../src/generate-toml.js';
+import {type ProxmoxConfig} from '../src/index.js';
 
 const config: ProxmoxConfig = {
 	global: {
@@ -48,7 +48,7 @@ const validateConfig = async (toml: string) => {
 	return execa({all: true})`docker run --rm -v ${path}:/config.toml --platform linux/amd64 --pull missing jamestalmage/proxmox-auto-install-assistant proxmox-auto-install-assistant validate-answer /config.toml`;
 };
 
-test('a generated config is valid', async t => {
+test('a generated src is valid', async t => {
 	const toml = generateToml(config);
 	const {all, exitCode} = await validateConfig(toml);
 	t.is(exitCode, 0, `${all}`);
