@@ -1,6 +1,6 @@
 {
 	"name": "proxmox-answer-file-generator",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Generate an answer file for automated Proxmox Installation",
 	"main": "distribution/index.js",
 	"author": {
